@@ -18,5 +18,5 @@ if($nome == "Matheus"){
 for($i = 0 ;$i < 10 ; $i++ ){
 
 echo "<br>essa é a linha $i <br>";
-echo '<br> 2 + 2 = ' . (2+2) . '!';
 }
+echo '<br> 2 + 2 = ' . (2+2) . '!';
