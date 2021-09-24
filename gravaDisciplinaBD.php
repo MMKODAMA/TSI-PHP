@@ -1,5 +1,10 @@
 <?php
 
+ini_set('display_errors',1);
+ini_set('display_startup_errors',1);
+error_reporting(E_ALL);
+
+
 $_POST['nomeAula'] =$_POST['nomeAula'] ?? '';
 $_POST['nomeProfessor'] = $_POST['nomeProfessor'] ?? '';
 $_POST['diaAula'] = $_POST['diaAula'] ?? '';
@@ -7,7 +12,7 @@ $_POST['descricao'] = $_POST['descricao'] ?? '';
 
 if( empty($_POST['nomeAula']) || empty($_POST['diaAula'])){
 
-    die('ERRO! Os Campos nome e dia sao obrigatorios');
+    die('<br><br>ERRO! Os Campos nome e dia sao obrigatorios');
 
 }
 
@@ -29,7 +34,7 @@ $db_pass = '';
 $db = new PDO($db_dsn, $db_user, $db_pass);
 
 $stmt = $db->prepare('INSERT disciplinas 
-                            (nomeAula, nomeProdessor, diaAula, descricao, ip)
+                            (nomeAula, nomeProfessor, diaAula, descricao, ip)
                       VALUES
                             (:nomeAula, :nomeProfessor,:diaAula,:descricao, :ip)');
 
