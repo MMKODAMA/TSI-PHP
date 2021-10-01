@@ -12,14 +12,14 @@ $db_pass = '';
 
 $db = new PDO($db_dsn, $db_user, $db_pass);
 
-$preparada = $db->prepare('UPDATE disciplinas SET nomeAula= :nome WHERE id = 1');
+$preparada = $db->prepare('UPDATE disciplinas SET nomeAula= :nome WHERE id = 3');
 
 if($preparada){
 
     if($preparada->execute([':nome' => $novoNome])){
         
         echo"Sucesso";
-        
+
     }
 
 }else{

@@ -51,3 +51,4 @@ if($stmt->execute($valores)){
 echo"<pre>";
 var_dump($valores);
 echo"</pre>";
+header('Location: listarSeries.php?gravado=1');
