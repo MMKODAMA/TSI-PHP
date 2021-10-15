@@ -1,9 +1,5 @@
 <?php
 
-session_start();
-if(!isset($_SESSION['id'])){
-    echo 'Acesso Negado';
-    exit();
-}
+require_once('sessao/controle.php');
 session_destroy();
 header('Location: login.html');
