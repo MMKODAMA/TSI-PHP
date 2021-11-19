@@ -1,15 +1,15 @@
 <?php
 
-//echo"recebe.php";
+$_POST['email'] = $_POST['email'] ?? 'Não informado';
 
-//var_dump($_POST);
-$_POST['email'] = $_POST['email'] ?? 'Nao informado';
-$_POST['password'] = isset($_POST['password']) ? $_POST['password'] : 'Nao informado';
+$_POST['password'] = isset($_POST['password']) ? $_POST['password'] : 'Não informado';
 
-echo "o seu email é ". $_POST['email'];
-echo"<br><br>";
-//echo"seu email é {$_POST['email']}";
-echo"sua senha é {$_POST['password']}";
+echo "Seu e-mail é " . $_POST['email'] . " e sua senha é " . $_POST['password'];
 
+echo "<br><br>";
 
+echo "Seu e-mail é {$_POST['email']} e sua senha é {$_POST['password']}";
 
+echo "<br><br>";
+
+phpinfo();

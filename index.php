@@ -1,97 +1,127 @@
 <?php
+//BÁSICO DO BÁSICO
 
-//muito util para debug (NUNCA USAR EM PRODUÇAO)
+//muito útil para DEBUG (NUNCA USAR EM PRODUÇÃO)
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
+//FIM muito útil para DEBUG (NUNCA USAR EM PRODUÇÃO)
 
+//echo 'Olá mundo!';
 
-//echo "Hello World";
+/*
+Comentário 
+de 
+bloco
+*/
 
-$nome = "Matheus Makoto Kodama";
+$nome = 'Luiz Fernando';//uma variável em PHP
 
-echo "ola, " . $nome . "!<br><br>";//concatenado
+echo 'Olá, ' . $nome . '!<br><br>';//Aqui, foi concatenando
 
-echo "ola, $nome!";//interpolado
-//Condicionais
-if($nome == "Matheus"){
-    echo "<br><br>O nome é igual";
+echo "Olá, $nome!";
+
+//CONDICIONAIS 
+
+if( $nome == 'Luiz' ){
+
+    echo '<br><br>O nome é igual';
+
 }else{
-    echo "<br><br>O nome nao é igual<br><br>";
-};
 
-$dia = "sexta";
-
-switch($dia){
-    case "segunda":
-        echo "estude";
-        break;
-    case "terça":
-        echo "va para a aula de CMS";
-        break;
-    case "quarta":
-        echo "va para a aula de BD";
-        break;
-    case "quinta":
-        echo "seja feliz aqui e agora";
-        break;
-    case "sexta":
-        echo "va para o kombuka";
-        break;
-    default:
-        echo "va descansar";
-
+    echo '<br><br>O nome não é igual';
 }
 
-echo "<br><br>";
+echo '<br><br>';
+
+$dia = 'segunda';
+
+switch($dia){
+
+    case 'segunda':
+
+        echo 'Estude!';
+    break;
+
+    case 'terça':
+
+        echo 'Vá para aula de CMS!';
+    break;
+
+    case 'quarta':
+
+        echo 'Vá para aula de BD';
+    break;
+
+    case 'quinta':
+
+        echo 'Seja feliz aqui e agora';
+    break;
+
+    case 'sexta':
+
+        echo 'Vá para Kombuca';
+    break;
+
+    default:
+
+        echo 'Vá descansar';
+}
+
+echo '<br><br>';
 
 $animal = 'cachorro';
 
-$tipo = $animal == 'cachorro' ? 'mamifero': 'desconhecido'; // operador ternario
+$tipo = $animal == 'cachorro' ? 'mamífero' : 'desconhecido';
 
-
-
-$sobrenome = $sobrenome_informado ?? 'nao informado'; // ?? verifica se a variavel existe
+$sobrenome = $sobrenome_informado ?? 'não informado';
 
 echo "<br>Sobrenome: $sobrenome<br>";
 
+echo "<br>$animal é um animal to tipo: $tipo<br>";
 
-echo "<br>$animal é um animal do tipo $tipo<br>";
+echo '<br><br>';
 
-if($animal == 'cachorro'){
-    $tipo = 'mamifero';
-}else{
-    $tipo = 'desconhecido';
+//LOOPINGS
+
+echo "FOR:<br>";
+
+for( $i = 0 ; $i < 10 ; $i++ ){
+
+    echo "Essa é a linha $i<br>";
 }
 
+echo "WHILE:<br>";
 
+$i = 0;
 
-echo "<br><br>";
+while( $i < 10 ){
 
-//loopings
-echo "<br>FOR<br>";
-for($i = 0 ;$i < 10 ; $i++ ){
+    echo "Essa é a linha $i<br>";
 
-echo "<br>essa é a linha $i <br>";
-}
-echo "<br>WHILE<br>";
-$i=0;
-while($i < 10){
-    echo "<br>Essa é a linha $i<br>";
     $i++;
 }
-$i=0;
-echo "<br>DO<br>";
+
+echo "DO:<br>";
+
+$i = 0;
+
 do{
 
-    echo "<br>Essa é a linha $i<br>";
-    $i++;
+    echo "Essa é a linha $i<br>";
 
-}while($i < 10);
+    $i++;
+    
+}while( $i < 10 );
 
 echo '<br> 2 + 2 = ' . (2+2) . '!';
 
-include 'link.html';//se nao existir link.html da um erro mas continua a execuçao
-require 'link.html';//se nao existir link.html, da um erro fatal e para o programa
-require_once 'link.html';//verifica se ja foi incluido antes , nao inclui novamente
-include_once 'link.html';//verifica se ja foi incluido antes , nao inclui novamente
+//COMO CHAMAR OUTROS CÓDIGOS 
+
+include 'link.html'; //se não existir link.html dá um erro mas continua a execução
+
+require 'link.html'; //se não existir link.html, dá um erro fatal e para o programa
+
+include_once 'link.html'; //verifica se já foi incluído antes, se sim, não inclui novamente
+
+require_once 'link.html'; //verifica se já foi incluído antes, se sim, não inclui novamente
